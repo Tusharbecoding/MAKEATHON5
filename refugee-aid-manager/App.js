@@ -3,8 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Signin from './screens/helper/Signin';
 import { StyleSheet, Text, View } from 'react-native';
-import Onboarding from './screens/Onboarding';
 import Language from '../refugee-aid-manager/screens/Language'
+import RefugeeOnboard from '../refugee-aid-manager/screens/RefugeeOnboard'
+import HelperOnboard from '../refugee-aid-manager/screens/HelperOnBoard'
 
 
 
@@ -17,7 +18,8 @@ function App() {
       <NavigationContainer>
         <Stack.Navigator >
           <Stack.Screen options={{headerShown: false}} name="language" component={Language} />
-          <Stack.Screen options={{headerShown: false}} name="onboarding" component={Onboarding} />
+          <Stack.Screen options={{headerShown: false}} name="onboardingrefugee" component={RefugeeOnboard} />
+          <Stack.Screen options={{headerShown: false}} name="onboardinghelper" component={HelperOnboard} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

@@ -7,7 +7,7 @@ const App = ({navigation}) => {
     <View style={styles.container}>
         <View style={styles.forwardArrow}>
           <Icon name="arrowright" size={40} color="#9491FF" onPress={() =>
-            navigation.navigate('onboarding')
+            navigation.navigate('onboardingrefugee')
           } />
         </View>
         <View style={styles.textContainer}>

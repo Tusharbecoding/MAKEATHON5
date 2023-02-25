@@ -1,18 +1,19 @@
 import { StyleSheet, Text, View, Image, useWindowDimensions,Button } from 'react-native';
-import React, { useState } from 'react';
+import Icon from 'react-native-vector-icons/AntDesign';
 
-
-const App = ({ item }) => {
-    const { width } = useWindowDimensions();
+const App = ({navigation}) => {
     return (
-        <View style={[styles.container, { width }]}>
-            <Text style={{ marginTop: 80, fontSize: 50, color: '#9491FF', fontWeight: 700 }}>RAM</Text>
+        <View style={[styles.container]}>
+            <Text style={{ marginTop: 10, fontSize: 50, color: '#9491FF', fontWeight: 700 }}>RAM</Text>
             <View style={[styles.maal]}>
-                <Image source={item.image} style={{ height: 300, width: '100%', marginTop: 90 }} />
-                <Text style={{ marginTop: 30, justifyContent: 'center', alignContent: 'center', alignItems: 'center', fontSize: 30, color: '#9491FF', fontWeight: 600 }}>{item.title}</Text>
+                <Image source={require('../assets/helper.png')} style={{ height: 300, width: '100%', marginTop: 90 }} />
+                <Text style={{ marginTop: 30, justifyContent: 'center', alignContent: 'center', alignItems: 'center', fontSize: 30, color: '#9491FF', fontWeight: 600 }}>Refugee</Text>
                 <View style={[styles.text]}>
-                    <Text style={{ marginTop: 20, fontSize: 20, color: '#9491FF' }}>{item.description}</Text>
+                    <Text style={{ marginTop: 20, fontSize: 20, color: '#9491FF' }}>Aid refugees using our completely safe platform for crowdfunding using blockchain</Text>
                 </View>
+            </View>
+            <View style={{marginTop:20}}>
+            <Button title="GET STARTED" padding="20"></Button>
             </View>
         </View>
     )
