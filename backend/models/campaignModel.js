@@ -25,7 +25,7 @@ const campaignSchema = mongoose.Schema({
     donations:[{
         donationId:{
             type: mongoose.Schema.Types.ObjectId,
-            required: true,
+            // required: true,
             ref:'Donation'
         }
     }]
