@@ -1,9 +1,6 @@
 import express from "express";
 const router = express.Router();
-import {
-  helperMiddleware,
-  refugeeMiddleware,
-} from "../middlewares/authMiddleware";
+import { helperMiddleware } from "../middlewares/authMiddleware";
 import {
   authHelper,
   registerHelper,
