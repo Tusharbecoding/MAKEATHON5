@@ -53,7 +53,7 @@ const registerHelper = asyncHandler(async (req, res) => {
       firstName: helper.firstName,
       lastName: helper.lastName,
       email: helper.email,
-      token: generateToken(user._id),
+      token: generateToken(helper._id),
     });
   } else {
     res.status(400);
@@ -67,10 +67,10 @@ const registerHelper = asyncHandler(async (req, res) => {
 const getHelperProfile = asyncHandler(async (req, res) => {
   const helper = await Helper.findById(req.helper._id);
 
-//   const campCreated = [];
-//   helper.campaignsCreated.map((x) => {
-//     let obj = {};
-//   });
+  //   const campCreated = [];
+  //   helper.campaignsCreated.map((x) => {
+  //     let obj = {};
+  //   });
 
   if (helper) {
     res.json({
@@ -81,6 +81,9 @@ const getHelperProfile = asyncHandler(async (req, res) => {
       imageUrl: helper.imageUrl,
       //   campaignsCreated:
     });
+  } else {
+    res.status(200);
+    throw new Error("Not found");
   }
 });
 
@@ -103,7 +106,7 @@ const getHelpers = asyncHandler(async (req, res) => {
 });
 
 // @desc get helper by id
-// @route GET /api/helpers
+// @route GET /api/helpers/:id
 // @access Private
 const getHelperById = asyncHandler(async (req, res) => {
   const helper = await Helper.findById(req.params.id).select("-password");
@@ -154,5 +157,5 @@ const deleteHelper = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("User not found");
   }
-  res.json(user);
+  res.json(helper);
 });

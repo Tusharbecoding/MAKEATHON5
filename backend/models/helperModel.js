@@ -15,7 +15,7 @@ const helperSchema = mongoose.Schema({
     required: true,
     unique: true,
   },
-  imageUrl:{
+  imageUrl: {
     type: String,
     required: false,
   },
@@ -27,7 +27,7 @@ const helperSchema = mongoose.Schema({
     {
       campaignId: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
+        required: false,
         ref: "Campaign",
       },
       createdOn: {
@@ -40,7 +40,7 @@ const helperSchema = mongoose.Schema({
     {
       campaignId: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
+        required: false,
         ref: "Campaign",
       },
       donatedOn: {
@@ -49,7 +49,7 @@ const helperSchema = mongoose.Schema({
       },
       amount: {
         type: Number,
-        required: true,
+        required: false,
       },
     },
   ],
