@@ -6,7 +6,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import Language from '../refugee-aid-manager/screens/Language'
 import RefugeeOnboard from '../refugee-aid-manager/screens/RefugeeOnboard'
 import HelperOnboard from '../refugee-aid-manager/screens/HelperOnBoard'
-
+import SignIn from '../refugee-aid-manager/screens/helper/Signin'
+import Rsingnin from '../refugee-aid-manager/screens/refugee/Rsingin'
 
 
 
@@ -14,15 +15,16 @@ const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <View style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator >
-          <Stack.Screen options={{headerShown: false}} name="language" component={Language} />
-          <Stack.Screen options={{headerShown: false}} name="onboardingrefugee" component={RefugeeOnboard} />
-          <Stack.Screen options={{headerShown: false}} name="onboardinghelper" component={HelperOnboard} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </View>
+    <Rsingnin/>
+    // <View style={styles.container}>
+    //   <NavigationContainer>
+    //     <Stack.Navigator >
+    //       <Stack.Screen options={{headerShown: false}} name="language" component={Language} />
+    //       <Stack.Screen options={{headerShown: false}} name="onboardingrefugee" component={RefugeeOnboard} />
+    //       <Stack.Screen options={{headerShown: false}} name="onboardinghelper" component={HelperOnboard} />
+    //     </Stack.Navigator>
+    //   </NavigationContainer>
+    // </View>
   )
 }
 
