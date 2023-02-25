@@ -13,7 +13,9 @@ const App = ({navigation}) => {
                 </View>
             </View>
             <View style={{marginTop:20}}>
-            <Button title="GET STARTED" padding="20"></Button>
+            <Button title="GET STARTED" padding="20" onPress={() =>
+                navigation.navigate('choice')
+                }></Button>
             </View>
         </View>
     )
