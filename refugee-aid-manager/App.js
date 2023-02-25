@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import Onboarding from './screens/Onboarding';
+import Language from '../refugee-aid-manager/screens/Language'
+
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
+    <View style={styles.container}>
+      <Onboarding/>
+      {/* <Language/> */}
     </View>
   )
 }
@@ -12,5 +16,11 @@ const App = () => {
 export default App
 
 const styles = StyleSheet.create({
-    
+  container:{
+    // flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    height:'100%',
+    // width:'100%',
+}
 })
