@@ -39,3 +39,5 @@ const getDonationsByCampaign = asyncHandler(async (req, res) => {
     throw new Error("Not found");
   }
 });
+
+export { donateToCampaign, getDonationByHelper, getDonationsByCampaign };

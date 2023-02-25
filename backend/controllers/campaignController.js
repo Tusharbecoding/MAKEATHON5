@@ -3,7 +3,7 @@ import Campaign from "../models/campaignModel";
 
 // @desc create a new campaign
 // @route POST /api/campaigns
-// @access Private
+// @access Helper
 const createCampaign = asyncHandler(async (req, res) => {
   const { name, start, end, story } = req.body;
   const campaign = new Campaign({
@@ -42,3 +42,4 @@ const getCampaignById = asyncHandler(async (req, res) => {
   }
 });
 
+export { createCampaign, getCampaigns, getCampaignById };
