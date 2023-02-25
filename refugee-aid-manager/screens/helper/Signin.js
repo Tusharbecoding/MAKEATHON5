@@ -3,8 +3,8 @@ import React from 'react'
 
 const Signin = () => {
   return (
-    <View>
-      <Text>Signin</Text>
+    <View style={{alignItems: 'center', flex:1}}>
+      <Text style={{color: white, }}>Signin</Text>
     </View>
   )
 }
@@ -12,5 +12,9 @@ const Signin = () => {
 export default Signin
 
 const styles = StyleSheet.create({
-    
+    container: {
+        flex: 1,
+        padding: 24,
+        backgroundColor: '#010101',
+    },
 })

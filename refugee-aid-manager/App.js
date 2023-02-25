@@ -1,16 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Signin from './screens/helper/Signin';
 
-const App = () => {
+
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
-  )
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Signin" component={Signin} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({
-    
-})
