@@ -9,26 +9,22 @@ import WelcomeHelper from './screens/helper/WelcomeHelper';
 import WelcomeRefugee from './screens/refugee/WelcomeRefugee';
 import RefugeeOnboard from '../refugee-aid-manager/screens/RefugeeOnboard'
 import HelperOnboard from '../refugee-aid-manager/screens/HelperOnBoard'
-import SignIn from '../refugee-aid-manager/screens/helper/Signin'
-import Rsingnin from '../refugee-aid-manager/screens/refugee/Rsingin'
+import RSignin from '../refugee-aid-manager/screens/refugee/Rsingin'
 import Signup from '../refugee-aid-manager/screens/helper/Signup'
-import RSignUp from '../refugee-aid-manager/screens/refugee/RSingup'
+import RSignup from '../refugee-aid-manager/screens/refugee/RSingup'
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <View style={styles.container}>
-      {/* <NavigationContainer>
+      <NavigationContainer>
         <Stack.Navigator >
-          <Stack.Screen options={{headerShown: false}} name="language" component={Language} />
-          <Stack.Screen options={{headerShown: false}} name="choice" component={Choice} />
-          <Stack.Screen options={{headerShown: false}} name="welcomehelper" component={WelcomeHelper} />
-          <Stack.Screen options={{headerShown: false}} name="welcomerefugee" component={WelcomeRefugee} />
-          <Stack.Screen options={{headerShown: false}} name="onboardingrefugee" component={RefugeeOnboard} />
-          <Stack.Screen options={{headerShown: false}} name="onboardinghelper" component={HelperOnboard} />
+          
+          <Stack.Screen options={{headerShown: false}} name="rsignin" component={RSignin} />
+          
         </Stack.Navigator>
-      </NavigationContainer> */}
+      </NavigationContainer>
     </View>
   )
 }

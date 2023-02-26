@@ -31,7 +31,9 @@ const WelcomeHelper = ({navigation}) => {
             <Icon name="google" size={32} color="#9491FF" />
             <Text style={styles.textButton}>Continue With Google</Text>
         </Pressable>
-        <Text style={{fontSize: 18, color: '#9491FF'}}>Sign In</Text>
+        <Text style={{fontSize: 18, color: '#9491FF'}} onPress={() =>
+          navigation.navigate('signin')
+          } >Sign In</Text>
       </View>
     </View>
   )

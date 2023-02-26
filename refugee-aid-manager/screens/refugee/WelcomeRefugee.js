@@ -24,14 +24,17 @@ const WelcomeRefugee = ({navigation}) => {
         <Text style={styles.subText}>The only Refugee Aid app you will ever need</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button}>
+        <Pressable style={styles.button} onPress={() =>
+          navigation.navigate('rsignup')
+          }>
             <Text style={styles.textButton}>Sign Up Free</Text>
         </Pressable>
         <Pressable style={styles.buttonInset}>
             <Icon name="google" size={32} color="#9491FF" />
             <Text style={styles.textButton}>Continue With Google</Text>
         </Pressable>
-        <Text style={{fontSize: 18, color: '#9491FF'}}>Sign In</Text>
+        <Text style={{fontSize: 18, color: '#9491FF'}} onPress={() =>
+          navigation.navigate('rsignin')}>Sign In</Text>
       </View>
     </View>
   )

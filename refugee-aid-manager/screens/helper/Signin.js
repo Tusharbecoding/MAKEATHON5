@@ -4,12 +4,13 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import { TextInput } from 'react-native-gesture-handler';
 
 
-const Signin = () => {
+const Signin = ({ navigation }) => {
   return (
 
     <View style={[styles.container]}>
-      <View style={styles.backwardArrow}>
-        <Icon name="arrowleft" size={40} color="#9491FF" />
+      <View style={styles.backwardArrow}  >
+        <Icon name="arrowleft" size={40} color="#9491FF" onPress={() =>
+          navigation.navigate('welcomehelper')} />
       </View>
       <Text style={{ color: '#9491FF',marginTop:10,fontSize:50,fontWeight:700}}>RAM</Text>
       <Image source={require('../../assets/hands.png')} style={{height:320,width:320}}></Image>
