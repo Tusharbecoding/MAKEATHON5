@@ -145,3 +145,5 @@ const deleteRefugee = asyncHandler(async (req, res) => {
   }
   res.json(refugee);
 });
+
+export {authRefugee, registerRefugee, getRefugeeById, getRefugeeProfile, getRefugees, deleteRefugee}

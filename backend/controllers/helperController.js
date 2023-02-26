@@ -26,7 +26,7 @@ const authHelper = asyncHandler(async (req, res) => {
 });
 
 // @desc    Register a new helper
-// @route   POST /api/helper
+// @route   POST /api/helpers
 // @acess   Public
 const registerHelper = asyncHandler(async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
@@ -159,3 +159,13 @@ const deleteHelper = asyncHandler(async (req, res) => {
   }
   res.json(helper);
 });
+
+export {
+  authHelper,
+  registerHelper,
+  getHelperProfile,
+  getHelpers,
+  updateHelper,
+  deleteHelper,
+  getHelperById,
+};

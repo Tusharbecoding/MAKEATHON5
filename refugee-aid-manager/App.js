@@ -11,20 +11,22 @@ import RefugeeOnboard from '../refugee-aid-manager/screens/RefugeeOnboard'
 import HelperOnboard from '../refugee-aid-manager/screens/HelperOnBoard'
 import RSignin from '../refugee-aid-manager/screens/refugee/Rsingin'
 import Signup from '../refugee-aid-manager/screens/helper/Signup'
-import RSignup from '../refugee-aid-manager/screens/refugee/RSingup'
+import RSignUp from '../refugee-aid-manager/screens/refugee/RSingup'
+import MainContainer from '../refugee-aid-manager/screens/refugee/Rnavigation/maincontainer'
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <View style={styles.container}>
+  {/*<MainContainer/>*/}
       <NavigationContainer>
         <Stack.Navigator >
           
           <Stack.Screen options={{headerShown: false}} name="rsignin" component={RSignin} />
           
         </Stack.Navigator>
-      </NavigationContainer>
+      </NavigationContainer> 
     </View>
   )
 }
