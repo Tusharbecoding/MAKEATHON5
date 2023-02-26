@@ -13,12 +13,14 @@ import SignIn from '../refugee-aid-manager/screens/helper/Signin'
 import Rsingnin from '../refugee-aid-manager/screens/refugee/Rsingin'
 import Signup from '../refugee-aid-manager/screens/helper/Signup'
 import RSignUp from '../refugee-aid-manager/screens/refugee/RSingup'
+import MainContainer from '../refugee-aid-manager/screens/refugee/Rnavigation/maincontainer'
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <View style={styles.container}>
+      <MainContainer/>
       {/* <NavigationContainer>
         <Stack.Navigator >
           <Stack.Screen options={{headerShown: false}} name="language" component={Language} />
